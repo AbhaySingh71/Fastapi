@@ -17,6 +17,25 @@
   <li><strong>Framework:</strong> FastAPI</li>
   <li><strong>Language:</strong> Python</li>
   <li><strong>Data Storage:</strong> JSON file</li>
+  <li><strong>Data Validation:</strong> Pydantic</li>
+</ul>
+
+<h2>🔍 Role of Pydantic</h2>
+<p>
+  <strong>Pydantic</strong> is used for data validation and parsing in this project. It ensures that all patient data (such as <code>age</code>, <code>height</code>, and <code>weight</code>) meets the specified constraints. For example:
+</p>
+<ul>
+  <li><code>age</code> must be between 1 and 119</li>
+  <li><code>height</code> and <code>weight</code> must be positive numbers</li>
+  <li><code>gender</code> must be one of: 'male', 'female', or 'others'</li>
+</ul>
+<p>
+  It also provides advanced features such as:
+</p>
+<ul>
+  <li><strong>Computed fields</strong>: Automatically calculates <code>BMI</code> and generates a health <code>verdict</code> based on it</li>
+  <li><strong>Partial updates</strong>: Using <code>Optional</code> fields in the update model to allow flexible edits</li>
+  <li><strong>Serialization</strong>: Converts validated patient data into dictionaries for storage</li>
 </ul>
 
 <h2>📁 Project Structure</h2>
@@ -29,7 +48,7 @@
 <h2>📦 Installation</h2>
 <ol>
   <li>Clone the repository:
-    <pre><code>git clone https://github.com/yourusername/fastapi-patient-management.git</code></pre>
+    <pre><code>git clone https://github.com/Abhaysingh71/fastapi-patient-management.git</code></pre>
   </li>
   <li>Navigate into the project:
     <pre><code>cd fastapi-patient-management</code></pre>
@@ -84,9 +103,5 @@
   <li><strong>&ge; 30</strong> → Obese</li>
 </ul>
 
-<h2>📮 Contact</h2>
-<p>For suggestions or issues, please open an <a href="https://github.com/yourusername/fastapi-patient-management/issues">issue</a> or contact the maintainer.</p>
-
 <hr />
-<p>Made with ❤️ using FastAPI</p>
-
+<p>Made with ❤️ using FastAPI and Pydantic</p>
